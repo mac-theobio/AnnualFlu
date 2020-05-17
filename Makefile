@@ -22,6 +22,9 @@ Sources += $(wildcard *.txt)
 
 Sources += $(wildcard *.html)
 
+Ignore += annualflu/
+Sources += $(wildcard *.zip *.pl) index.dmu
+
 ######################################################################
 
 ### Makestuff
