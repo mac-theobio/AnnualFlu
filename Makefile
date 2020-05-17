@@ -2,6 +2,8 @@
 ## Created and abandoned (maybe for Judy)
 ## Rescuing from yushan mirror 2020 May 17 (Sun)
 
+## http://mac-theobio.github.io/AnnualFlu/
+
 current: target
 -include target.mk
 
@@ -24,7 +26,7 @@ Sources += $(wildcard *.html)
 
 ### Makestuff
 
-Sources += Makefile 
+Sources += Makefile README.md
 
 Ignore += makestuff
 msrepo = https://github.com/dushoff
