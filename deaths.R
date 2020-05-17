@@ -4,7 +4,8 @@
 monthlen = c(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
 monthlen = c(monthlen, monthlen, monthlen, monthlen)
 monthlen[14]=29
-monthlen=monthlen/mean(monthlen)
+monthlen=monthlen/30.4375
+monthlen
 
 ## Functions to read in age-structure death matrix as data frame,
 ## normalize by month length
@@ -65,18 +66,18 @@ DivMonth = function(deaths)
 
 ## Read in national input files
 
-all = read.table("all.txt", header=TRUE)
+all = read.table("all.in", header=TRUE)
 deathyear = all$year
 deathmonth=all$month
 deathdate=all$year+(all$month-1)/12
 all = deathframe(all)
 
-multflu = deathframe(read.table("multflu.txt", header=TRUE))
-undflu = deathframe(read.table("undflu.txt", header=TRUE))
-multpi = deathframe(read.table("multpi.txt", header=TRUE))
-undpi = deathframe(read.table("undpi.txt", header=TRUE))
-multrc = deathframe(read.table("multrc.txt", header=TRUE))
-undrc = deathframe(read.table("undrc.txt", header=TRUE))
+multflu = deathframe(read.table("multflu.in", header=TRUE))
+undflu = deathframe(read.table("undflu.in", header=TRUE))
+multpi = deathframe(read.table("multpi.in", header=TRUE))
+undpi = deathframe(read.table("undpi.in", header=TRUE))
+multrc = deathframe(read.table("multrc.in", header=TRUE))
+undrc = deathframe(read.table("undrc.in", header=TRUE))
 
 plot(deathdate, all$dtot, type = "l")
 plot(deathdate, undpi$dtot, type = "l")

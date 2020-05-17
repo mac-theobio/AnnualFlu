@@ -1,0 +1,98 @@
+### Fifth attempt to do AJE revisions
+### Using many-month baseline, with sensitivity
+### Lots of stuff deleted, most recent versions in public/ and wholestats/
+
+include $(MKDIR)/standard.def
+# include $(MKDIR)/out.mk
+
+tmpcurr: conf.tab.tex
+
+all: notarget
+
+####################### CRIB #######################
+
+input:
+	cp ../wholestats/*.in .
+
+# %.R %.pl: 
+	# cp ../wholestats/$@ .
+
+## Read surveillance data
+surv.R.dat: surv.R
+
+## Read death data
+deaths.R.dat: deaths.R
+deathframe.R.dat: deaths.R.dat deathframe.R
+
+### Normalization functions
+
+exc.R.dat: deathframe.R.dat exc.R
+
+## Mean deaths table
+
+meandeaths.tab.tex: meandeaths.Rtab Rtabtex.pl
+	$(EX)
+
+### Time series figure
+
+fit.R.dat: exc.R fit.R
+
+fit.ps: fit.R.dat
+
+### Regression functions
+
+regress.R.dat: surv.R.dat deathframe.R.dat exc.R.dat regress.R
+
+## Main regression, with CI
+
+main.R.dat: regress.R.dat main.R  ## See below, this is one of the TAB files
+
+conf.R.dat: regress.R.dat main.R.dat conf.R
+
+conf.tab.tex: conf.R.dat conf.tab.tmp conftab.pl
+	conftab.pl $^ > $@
+
+### Different summer, winter choices
+
+TABN = main swin short ssum broad base
+TABS = $(TABN:%=%.tab.tex)
+TABF = $(TABN:%=%.R.dat)
+
+tabs: $(TABS)
+
+$(TABF): %.R.dat: regress.R.dat season.R.dat %.R
+
+$(TABS): %.tab.tex: %.R.dat main.tab.tmp tab.pl
+	tab.pl $^ > $@
+
+### Removing surveillance trend
+
+trendmain.R.dat: regress.R.dat trendmain.R
+
+trendmain.tab.tex: %.tab.tex: %.R.dat main.tab.tmp tab.pl
+	tab.pl $^ > $@
+
+### Attribution vs. excess
+
+attrib.R.dat: $(TABF) attrib.R
+
+### Regional regressions
+### Subdirectory make does not work!  Check book
+
+reg.R.dat: states
+	cat ny/wmain.R.dat ii/wmain.R.dat > $@
+
+states: 
+	$(MAKE) -C ny/
+	$(MAKE) -C ii/
+
+reg.tab.tex: reg.R.dat reg.tab.tmp wtab.pl
+	wtab.pl $^ > $@
+
+### Serfling estimates
+
+serfdeaths.R.dat: serfling.txt serfdeaths.R
+
+serfling.R.dat: serfdeaths.R.dat surv.R.dat regress.R.dat serfling.R
+
+include $(MKDIR)/standard.mk

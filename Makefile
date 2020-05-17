@@ -1,43 +1,46 @@
-# AnnualFlu
-## Maybe started copying from wrong place. Check /home/dushoff/arc/lalashan/princeton/dis/research/flu/mortality/longann/comp
-
-### Hooks for the editor to set the default target
+## This is AnnualFlu. Not clear it does anything
+## Created and abandoned (maybe for Judy)
+## Rescuing from yushan mirror 2020 May 17 (Sun)
 
 current: target
+-include target.mk
 
-target pngtarget pdftarget vtarget acrtarget: deaths.Rout 
+# -include makestuff/perl.def
 
-##################################################################
-
-# make files
-
-Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
-include stuff.mk
-# include $(ms)/perl.def
-
-##################################################################
-
-## Content
-
-Sources += $(wildcard *.txt *.R)
-
-deaths.Rout: $(wildcard *.txt) deaths.R
+vim_session:
+	bash -cl "vmt"
 
 ######################################################################
 
-## Crib
+Sources += $(wildcard Makefile.*)
 
-%.R:
-	/bin/cp $(Drop)/annualflu/$@ .
+Sources += $(wildcard *.R)
 
+Sources += $(wildcard *.txt)
+
+Sources += $(wildcard *.html)
+
+######################################################################
 
 ### Makestuff
 
-## Change this name to download a new version of the makestuff directory
-# Makefile: start.makestuff
+Sources += Makefile 
 
--include $(ms)/git.mk
--include $(ms)/visual.mk
+Ignore += makestuff
+msrepo = https://github.com/dushoff
+Makefile: makestuff/Makefile
+makestuff/Makefile:
+	git clone $(msrepo)/makestuff
+	ls $@
 
--include $(ms)/wrapR.mk
-# -include $(ms)/oldlatex.mk
+localstuff: 
+	ln -s ../makestuff .
+	ls makestuff/Makefile
+
+-include makestuff/os.mk
+
+-include makestuff/wrapR.mk
+
+-include makestuff/git.mk
+-include makestuff/visual.mk
+-include makestuff/projdir.mk

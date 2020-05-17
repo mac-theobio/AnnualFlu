@@ -1,0 +1,17 @@
+
+tmpcurr: index.html
+
+index.html: index.dmu dh.pl
+	dh.pl $< > $@
+
+death.zip:
+	zip $@ mult*.txt und*.txt all.txt
+
+iideath.zip:
+	zip $@ ii*.txt 
+
+nydeath.zip:
+	zip $@ ny*.txt 
+
+scripts.zip:
+	zip $@ deaths.R deathframe.R exc.R fit.R regress.R conf.R season.R main.R swin.R short.R ssum.R broad.R base.R trendmain.R serfdeaths.R serfling.R wreg.R wmain.R
