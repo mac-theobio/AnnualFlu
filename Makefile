@@ -3,7 +3,7 @@
 ## Rescuing from yushan mirror 2020 May 17 (Sun)
 
 ## http://mac-theobio.github.io/AnnualFlu/
-## http://mac-theobio.github.io/AnnualFlu/test.md
+## http://mac-theobio.github.io/AnnualFlu/test
 
 current: target
 -include target.mk
@@ -19,6 +19,9 @@ Sources += $(wildcard *.md)
 
 index.html: index.dmu dh.pl
 	$(PUSHRO)
+
+test.gh.html: test.md
+	$(ghh_r)
 
 ######################################################################
 
@@ -53,6 +56,7 @@ localstuff:
 -include makestuff/os.mk
 
 -include makestuff/wrapR.mk
+-include makestuff/pandoc.mk
 
 -include makestuff/git.mk
 -include makestuff/visual.mk
