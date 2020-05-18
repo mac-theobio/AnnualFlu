@@ -1,7 +1,7 @@
 TITLE Influenza mortality
 
 !H2 Mortality due to influenza in the US: an annualized regression
-approach using multiple-cause mortality data.  [__Am. J. Epidemiol.__ 163:181](https://academic.oup.com/aje/article/163/2/181/95820)
+approach using multiple-cause mortality data.  [__Am. J. Epidemiol.__ 163:181]( {https://academic.oup.com/aje/article/163/2/181/95820 Article}
 {http://aje.oxfordjournals.org/cgi/reprint/kwj024?ijkey=CK5LPmRHPa7zKbz&keytype=ref Full text.}
 
 !H3 Data files
