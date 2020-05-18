@@ -3,6 +3,7 @@
 ## Rescuing from yushan mirror 2020 May 17 (Sun)
 
 ## http://mac-theobio.github.io/AnnualFlu/
+## http://mac-theobio.github.io/AnnualFlu/test.md
 
 current: target
 -include target.mk
@@ -13,6 +14,8 @@ vim_session:
 	bash -cl "vmt"
 
 ######################################################################
+
+Sources += $(wildcard *.md)
 
 index.html: index.dmu dh.pl
 	$(PUSHRO)
