@@ -12,11 +12,11 @@ Age groups 0-4, 5-14, 15-54, 55-64, 65-74, 75-84, 85+, total
 
 All deaths [all.txt](all.txt).  
 Multiple-cause influenza deaths [multflu.txt](multflu.txt).  
-Multiple-cause P\&I deaths [multpi.txt](multpi.txt).  
-Multiple-cause R\&C deaths [multrc.txt](multrc.txt).  
+Multiple-cause P&I deaths [multpi.txt](multpi.txt).  
+Multiple-cause R&C deaths [multrc.txt](multrc.txt).  
 Underlying-cause influenza deaths [undflu.txt](undflu.txt).  
-Underlying-cause P\&I deaths [undpi.txt](undpi.txt).  
-Underlying-cause R\&C deaths [undrc.txt](undrc.txt).  
+Underlying-cause P&I deaths [undpi.txt](undpi.txt).  
+Underlying-cause R&C deaths [undrc.txt](undrc.txt).  
 [*All US mortality files*](death.zip)
 
 ### New York metro mortality data
@@ -25,11 +25,11 @@ Age groups 0-4, 5-14, 15-54, 55-64, 65-74, 75-84, 85+, total
 
 All deaths [nyall.txt](nyall.txt).  
 Multiple-cause influenza deaths [nymultflu.txt](nymultflu.txt).  
-Multiple-cause P\&I deaths [nymultpi.txt](nymultpi.txt).  
-Multiple-cause R\&C deaths [nymultrc.txt](nymultrc.txt).  
+Multiple-cause P&I deaths [nymultpi.txt](nymultpi.txt).  
+Multiple-cause R&C deaths [nymultrc.txt](nymultrc.txt).  
 Underlying-cause influenza deaths [nyundflu.txt](nyundflu.txt).  
-Underlying-cause P\&I deaths [nyundpi.txt](nyundpi.txt).  
-Underlying-cause R\&C deaths [nyundrc.txt](nyundrc.txt).  
+Underlying-cause P&I deaths [nyundpi.txt](nyundpi.txt).  
+Underlying-cause R&C deaths [nyundrc.txt](nyundrc.txt).  
 [*All NY mortality files*](nydeath.zip)
 
 ### IL and IN mortality data
@@ -38,11 +38,11 @@ Age groups 0-4, 5-14, 15-54, 55-64, 65-74, 75-84, 85+, total
 
 All deaths [iiall.txt](iiall.txt).  
 Multiple-cause influenza deaths [iimultflu.txt](iimultflu.txt).  
-Multiple-cause P\&I deaths [iimultpi.txt](iimultpi.txt).  
-Multiple-cause R\&C deaths [iimultrc.txt](iimultrc.txt).  
+Multiple-cause P&I deaths [iimultpi.txt](iimultpi.txt).  
+Multiple-cause R&C deaths [iimultrc.txt](iimultrc.txt).  
 Underlying-cause influenza deaths [iiundflu.txt](iiundflu.txt).  
-Underlying-cause P\&I deaths [iiundpi.txt](iiundpi.txt).  
-Underlying-cause R\&C deaths [iiundrc.txt](iiundrc.txt).  
+Underlying-cause P&I deaths [iiundpi.txt](iiundpi.txt).  
+Underlying-cause R&C deaths [iiundrc.txt](iiundrc.txt).  
 [*All IL and IN mortality files*](iideath.zip)
 
 ## R scripts
@@ -69,8 +69,7 @@ Weather regressions [wreg.R](wreg.R) [wmain.R](wmain.R)
 
 [*All R scripts*](scripts.zip)
 
-\----------------------------------------------------------------------
+-----------------------------------------------------------------------
 
-When these files are used, appropriate citation should be made to the
-paper cited above, and to this web address
-(http://mac-theobio.github.io/AnnualFlu/).
+_When these files are used, appropriate citation should be made to the
+paper cited above, and to this web address (http://mac-theobio.github.io/AnnualFlu/)._
