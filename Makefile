@@ -20,6 +20,9 @@ Sources += $(wildcard *.md)
 index.html: index.dmu dh.pl
 	$(PUSHRO)
 
+index.gh.html: index.md
+	$(ghh_r)
+
 test.gh.html: test.md
 	$(ghh_r)
 

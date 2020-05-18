@@ -1,8 +1,12 @@
-## Mortality due to influenza in the US: an annualized regression approach using multiple-cause mortality data. \[*Am. J. Epidemiol.* 163:181\](https://academic.oup.com/aje/article/163/2/181/95820) [Full text.](http://aje.oxfordjournals.org/cgi/reprint/kwj024?ijkey=CK5LPmRHPa7zKbz&keytype=ref)
+# Influenza mortality
 
-### Data files
+## Mortality due to influenza in the US: an annualized regression approach using multiple-cause mortality data.
 
-#### US mortality data
+[__Am. J. Epidemiol.__ 163:181](https://academic.oup.com/aje/article/163/2/181/95820), Jonathan Dushoff, Joshua B. Plotkin, Cecile Viboud, David J. D. Earn, Lone Simonsen
+
+## Data files
+
+### US mortality data
 
 Age groups 0-4, 5-14, 15-54, 55-64, 65-74, 75-84, 85+, total
 
@@ -15,7 +19,7 @@ Underlying-cause P\&I deaths [undpi.txt](undpi.txt).
 Underlying-cause R\&C deaths [undrc.txt](undrc.txt).  
 [*All US mortality files*](death.zip)
 
-#### New York metro mortality data
+### New York metro mortality data
 
 Age groups 0-4, 5-14, 15-54, 55-64, 65-74, 75-84, 85+, total
 
@@ -28,7 +32,7 @@ Underlying-cause P\&I deaths [nyundpi.txt](nyundpi.txt).
 Underlying-cause R\&C deaths [nyundrc.txt](nyundrc.txt).  
 [*All NY mortality files*](nydeath.zip)
 
-#### IL and IN mortality data
+### IL and IN mortality data
 
 Age groups 0-4, 5-14, 15-54, 55-64, 65-74, 75-84, 85+, total
 
@@ -41,7 +45,7 @@ Underlying-cause P\&I deaths [iiundpi.txt](iiundpi.txt).
 Underlying-cause R\&C deaths [iiundrc.txt](iiundrc.txt).  
 [*All IL and IN mortality files*](iideath.zip)
 
-### R scripts
+## R scripts
 
 Import death data [deaths.R](deaths.R) [deathframe.R](deathframe.R)
 
