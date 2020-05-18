@@ -17,14 +17,13 @@ vim_session:
 
 Sources += $(wildcard *.md)
 
-index.html: index.dmu dh.pl
-	$(PUSHRO)
+Ignore += $(wildcard *.html)
 
-index.gh.html: index.md
+index.html: index.md
 	$(ghh_r)
 
-test.gh.html: test.md
-	$(ghh_r)
+## git rm index.html index.dmu dh.pl index.gh.html test.gh.html test.md ##
+## 2020 May 18 (Mon) 14:59#
 
 ######################################################################
 
@@ -34,10 +33,8 @@ Sources += $(wildcard *.R)
 
 Sources += $(wildcard *.txt)
 
-Sources += $(wildcard *.html)
-
 Ignore += annualflu/
-Sources += $(wildcard *.zip *.pl) index.dmu
+Sources += $(wildcard *.zip *.pl)
 
 ######################################################################
 
